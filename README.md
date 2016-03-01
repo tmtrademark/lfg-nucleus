@@ -1,7 +1,7 @@
 # lfg-nucleus [![Build Status](https://travis-ci.org/SupportClass/lfg-nucleus.svg?branch=master)](https://travis-ci.org/SupportClass/lfg-nucleus)
 > Meta bundle that ties together functionality from other "lfg" helper bundles.
 
-<img src="demo.png"/>
+<img src="screenshot.png"/>
 
 lfg-nucleus is useful for normalizing and centrally managing events from multiple other bundles. 
 At this time, lfg-nucleus integrates with:
