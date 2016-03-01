@@ -8,6 +8,7 @@ At this time, lfg-nucleus integrates with:
 - [lfg-hypetrain](https://github.com/SupportClass/lfg-hypetrain)
 - [lfg-siphon](https://github.com/SupportClass/lfg-siphon)
 - [lfg-streamtip](https://github.com/SupportClass/lfg-streamtip)
+- [lfg-sublistener](https://github.com/SupportClass/lfg-sublistener)
 
 lfg-nucleus depends on:
  - [lfg-filter](https://github.com/SupportClass/lfg-filter)@^2.0.0
