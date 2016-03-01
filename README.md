@@ -19,11 +19,11 @@ lfg-nucleus emits two events: `subscription` and `tip`.
 
 ### In a graphic or dashboard panel
 ```js
-nodecg.listenFor('subscription', function (subscription) {
+nodecg.listenFor('subscription', 'lfg-nucleus', function (subscription) {
     // do work
 });
 
-nodecg.listenFor('tip', function (tip) {
+nodecg.listenFor('tip', 'lfg-nucleus', function (tip) {
     // do work
 });
 ```
