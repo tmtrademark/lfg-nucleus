@@ -29,11 +29,14 @@ module.exports = function (extensionApi) {
 	flagged = require('./flagged')(nodecg, module.exports);
 	wordfilter = nodecg.extensions['lfg-filter'].wordfilter;
 	emailfilter = nodecg.extensions['lfg-filter'].emailfilter;
-	train = nodecg.extensions['lfg-hypetrain'];
 
 	// Wait until extensions load before starting services
 	server.on('extensionsLoaded', () => {
 		require('./services')(nodecg, module.exports);
+
+		if (Object(nodecg.extensions).hasOwnProperty('lfg-hypetrain')) {
+			train = nodecg.extensions['lfg-hypetrain'];
+		}
 
 		/*
 		 A long time ago I had major memory leak problems.
@@ -127,7 +130,10 @@ function _emitSubscription(subscription, filter) {
 		}
 
 		// Increments the train by one THEN sends out the socket message with the sub train data.
-		subscription.train = train.addPassenger();
+		if (train) {
+			subscription.train = train.addPassenger();
+		}
+
 		nodecg.sendMessage('subscription', subscription);
 		emitter.emit('subscription', subscription);
 	}

@@ -17,8 +17,7 @@
   "nodecg": {
     "compatibleRange": "~0.7.0",
     "bundleDependencies": {
-      "lfg-filter": "^2.0.0",
-      "lfg-hypetrain": "^2.0.0"
+      "lfg-filter": "^2.0.0"
     },
     "dashboardPanels": [
       {
