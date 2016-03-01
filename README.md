@@ -6,9 +6,9 @@
 lfg-nucleus is useful for normalizing and centrally managing events from multiple other bundles. 
 At this time, lfg-nucleus integrates with:
 - [lfg-hypetrain](https://github.com/SupportClass/lfg-hypetrain)
-- [lfg-siphon](https://github.com/SupportClass/lfg-siphon)
-- [lfg-streamtip](https://github.com/SupportClass/lfg-streamtip)
-- [lfg-sublistener](https://github.com/SupportClass/lfg-sublistener)
+- [lfg-siphon](https://github.com/SupportClass/lfg-siphon)@~0.3.0
+- [lfg-streamtip](https://github.com/SupportClass/lfg-streamtip)@~0.0.1
+- [lfg-sublistener](https://github.com/SupportClass/lfg-sublistener)@^2.0.0
 
 lfg-nucleus depends on:
  - [lfg-filter](https://github.com/SupportClass/lfg-filter)@^2.0.0
