@@ -1,0 +1,75 @@
+{
+  "name": "lfg-nucleus",
+  "version": "1.0.0",
+  "dependencies": {
+    "boe-list": "github:supportclass/boe-list",
+    "clone": "^1.0.2",
+    "numeral": "^1.5.3",
+    "uuid": "^2.0.1"
+  },
+  "homepage": "http://www.chrishanel.com/",
+  "author": "Alex Van Camp <email@alexvan.camp>",
+  "description": "Meta bundle that ties together functionality from other \"lfg\" helper bundles.",
+  "private": true,
+  "scripts": {
+    "test": "npm run static",
+    "static": "eslint dashboard/**/*.js extension/**/*.js"
+  },
+  "nodecg": {
+    "compatibleRange": "~0.7.0",
+    "bundleDependencies": {
+      "lfg-filter": "^2.0.0",
+      "lfg-hypetrain": "^2.0.0"
+    },
+    "dashboardPanels": [
+      {
+        "name": "notifications",
+        "title": "Notifications",
+        "width": 4,
+        "headerColor": "#2d4e8a",
+        "file": "panel.html",
+        "faIcon": "fa-exclamation"
+      },
+      {
+        "name": "clear-history",
+        "title": "Clear History",
+        "width": 3,
+        "file": "dialogs/clear_history.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "Yes, clear",
+            "type": "confirm"
+          },
+          {
+            "name": "No, do not clear",
+            "type": "dismiss"
+          }
+        ]
+      },
+      {
+        "name": "settings",
+        "title": "Settings",
+        "width": 3,
+        "file": "dialogs/settings.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "Apply",
+            "type": "confirm"
+          },
+          {
+            "name": "Cancel",
+            "type": "dismiss"
+          }
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0",
+    "eslint": "^2.2.0",
+    "eslint-config-xo": "^0.11.0",
+    "eslint-plugin-babel": "^3.1.0"
+  }
+}

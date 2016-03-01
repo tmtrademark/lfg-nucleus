@@ -1,0 +1,6 @@
+{
+	"extends": "xo/esnext",
+	"rules": {
+		"babel/new-cap": [0, {"capIsNewExceptions": ["nodecg.Replicant"]}]
+	}
+}
