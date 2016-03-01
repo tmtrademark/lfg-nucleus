@@ -1,13 +1,28 @@
 'use strict';
 
-module.exports = function (nodecg, nucleus) {
-	if (Object(nodecg.extensions).hasOwnProperty('lfg-siphon')) {
-		require('./siphon')(nodecg, nucleus);
-		nodecg.log.info('Listening to lfg-siphon');
-	}
+const semver = require('semver');
+const integrations = {
+	'lfg-siphon': '~0.3.0',
+	'lfg-streamtip': '~0.0.1'
+};
 
-	if (Object(nodecg.extensions).hasOwnProperty('lfg-streamtip')) {
-		require('./streamtip')(nodecg, nucleus);
-		nodecg.log.info('Listening to lfg-streamtip');
-	}
+module.exports = function (nodecg, nucleus) {
+	const bundles = require('../../../../lib/bundles');
+
+	Object.keys(integrations).forEach(bundleName => {
+		const bundle = bundles.find(bundleName);
+		if (!bundle) {
+			return;
+		}
+
+		const targetRange = integrations[bundleName];
+		if (semver.satisfies(bundle.version, targetRange)) {
+			require(`./${bundleName}`)(nodecg, nucleus);
+			nodecg.log.info(`Listening to ${bundleName}`);
+		} else {
+			nodecg.log.error(`The installed version of ${bundleName} is ${bundle.version}, ` +
+			`but lfg-nucleus supports ${bundleName}@${targetRange}`);
+			nodecg.log.error(`${bundleName} integration will not be enabled`);
+		}
+	});
 };

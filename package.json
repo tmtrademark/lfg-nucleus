@@ -4,6 +4,7 @@
   "dependencies": {
     "clone": "^1.0.2",
     "numeral": "^1.5.3",
+    "semver": "^5.1.0",
     "uuid": "^2.0.1"
   },
   "homepage": "http://www.chrishanel.com/",
