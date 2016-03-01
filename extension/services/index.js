@@ -3,7 +3,8 @@
 const semver = require('semver');
 const integrations = {
 	'lfg-siphon': '~0.3.0',
-	'lfg-streamtip': '~0.0.1'
+	'lfg-streamtip': '~0.0.1',
+	'lfg-sublistener': '^2.0.0'
 };
 
 module.exports = function (nodecg, nucleus) {
