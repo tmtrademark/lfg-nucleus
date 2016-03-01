@@ -1,5 +1,5 @@
 /* global Polymer */
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
 	'use strict';
 
 	var sendBtn = document.getElementById('send');
@@ -98,4 +98,4 @@
 			}
 		});
 	}
-})();
+});
