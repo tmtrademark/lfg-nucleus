@@ -1,3 +1,19 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/SupportClass/lfg-nucleus/compare/v1.0.2...v1.1.0) (2016-03-01)
+
+
+### Bug Fixes
+
+* **panel:** attempt to fix race condition when loading panel ([65fa348](https://github.com/SupportClass/lfg-nucleus/commit/65fa348))
+
+### Features
+
+* **integrations:** add lfg-sublistener integration ([46bfe96](https://github.com/SupportClass/lfg-nucleus/commit/46bfe96))
+* **integrations:** check bundle version before loading integration ([fbdcc37](https://github.com/SupportClass/lfg-nucleus/commit/fbdcc37))
+* **integrations:** remove lfg-doncorleone integration ([c6a1db2](https://github.com/SupportClass/lfg-nucleus/commit/c6a1db2))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/SupportClass/lfg-nucleus/compare/v1.0.1...v1.0.2) (2016-03-01)
 
