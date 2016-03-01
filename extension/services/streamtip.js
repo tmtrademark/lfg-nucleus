@@ -1,6 +1,6 @@
 'use strict';
 
-const Tip = require('../classes/Tip');
+const Tip = require('../classes/tip');
 
 module.exports = function (nodecg, nucleus) {
 	const streamTip = nodecg.extensions['lfg-streamtip'];

@@ -1,6 +1,6 @@
 'use strict';
 
-const Note = require('./Note.js');
+const Note = require('./note.js');
 
 module.exports = class Subscription extends Note {
 	constructor(options) {

@@ -1,6 +1,6 @@
 'use strict';
 
-const Subscription = require('../classes/Subscription');
+const Subscription = require('../classes/subscription');
 
 module.exports = function (nodecg, nucleus) {
 	const siphon = nodecg.extensions['lfg-siphon'];

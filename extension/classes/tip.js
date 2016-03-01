@@ -1,6 +1,6 @@
 'use strict';
 
-const Note = require('./Note.js');
+const Note = require('./note.js');
 const numeral = require('numeral');
 
 module.exports = class Tip extends Note {

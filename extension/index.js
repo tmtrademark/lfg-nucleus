@@ -2,7 +2,7 @@
 
 const server = require('../../../lib/server');
 const clone = require('clone');
-const Subscription = require('./classes/Subscription');
+const Subscription = require('./classes/subscription');
 const Tip = require('./classes/Tip');
 const EventEmitter = require('events');
 const emitter = new EventEmitter();
