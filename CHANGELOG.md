@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/SupportClass/lfg-nucleus/compare/v1.0.1...v1.0.2) (2016-03-01)
+
+
+### Bug Fixes
+
+* **extension:** fix another missed case sensitivity problem ([5de9a64](https://github.com/SupportClass/lfg-nucleus/commit/5de9a64))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/SupportClass/lfg-nucleus/compare/v1.0.0...v1.0.1) (2016-03-01)
 
