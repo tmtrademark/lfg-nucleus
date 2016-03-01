@@ -1,6 +1,6 @@
 {
   "name": "lfg-nucleus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "clone": "^1.0.2",
     "numeral": "^1.5.3",
