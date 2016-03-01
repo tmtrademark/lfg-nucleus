@@ -49,7 +49,7 @@ module.exports = function (nodecg) {
 ## Data Structures
 
 ### Subscription
-```
+```js
 {
     "name": "langeh",
     "timestamp": 1456809247462,
@@ -72,7 +72,7 @@ module.exports = function (nodecg) {
 ```
 
 ### Tip
-```
+```js
 {
     "name": "langeh",
     "timestamp": 1456809533513,
