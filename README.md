@@ -29,7 +29,7 @@ nodecg.listenFor('tip', function (tip) {
 ```
 
 ### In an extension
-First, add `lfg-nucleus` to your bundle's [`nodecg.bundleDependencies`](http://nodecg.com/tutorial-manifest.html.
+First, add `lfg-nucleus` to your bundle's [`nodecg.bundleDependencies`](http://nodecg.com/tutorial-manifest.html).
 
 Then, create code like the following:
 ```js
