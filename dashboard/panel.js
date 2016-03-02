@@ -1,11 +1,9 @@
 /* global Polymer */
-document.addEventListener('DOMContentLoaded', function () {
+(function () {
 	'use strict';
-
-	var sendBtn = document.getElementById('send');
-
 	var template = document.querySelector('template[is=dom-bind]');
-	template.async(function init() {
+
+	template.addEventListener('dom-change', function init() {
 		template.removeEventListener('dom-change', init);
 
 		/* Due to the data binding we do between the tabs and the visibility of the input fields,
@@ -39,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 
+		var sendBtn = document.getElementById('send');
 		sendBtn.addEventListener('click', function () {
 			var name = document.getElementById('name').value;
 			var type = document.getElementById('tabs').selected === 0 ? 'subscription' : 'tip';
@@ -98,4 +97,4 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
-});
+})();
