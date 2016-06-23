@@ -1,3 +1,13 @@
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/SupportClass/lfg-nucleus/compare/v2.0.0...v2.0.1) (2016-06-23)
+
+
+### Bug Fixes
+
+* **panel:** tip amounts now display ([4079c4f](https://github.com/SupportClass/lfg-nucleus/commit/4079c4f))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/SupportClass/lfg-nucleus/compare/v1.1.0...v2.0.0) (2016-06-23)
 

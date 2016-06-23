@@ -16,7 +16,6 @@
 		},
 
 		_noteChanged(note) {
-			this.type = note.type;
 			this.name = note.name;
 			this.id = note.id;
 			this.profileUrl = note.profileUrl || false;
