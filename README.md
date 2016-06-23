@@ -34,13 +34,13 @@ First, add `lfg-nucleus` to your bundle's [`nodecg.bundleDependencies`](http://n
 Then, create code like the following:
 ```js
 module.exports = function (nodecg) {
-    var nucleus = nodecg.extensions['lfg-nucleus'];
+    const nucleus = nodecg.extensions['lfg-nucleus'];
     
-    nucleus.on('subscription', function (subscription) {
+    nucleus.on('subscription', subscription => {
         // do work
     });
     
-    nucleus.on('tip', function (tip) {
+    nucleus.on('tip', tip => {
         // do work
     });
 };

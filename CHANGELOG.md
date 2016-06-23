@@ -1,3 +1,29 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/SupportClass/lfg-nucleus/compare/v1.1.0...v2.0.0) (2016-06-23)
+
+
+### Bug Fixes
+
+* **panel:** fix case where panel sometimes wouldn't init properly ([356eaa9](https://github.com/SupportClass/lfg-nucleus/commit/356eaa9))
+* **panel:** fix manual entry controls sometimes not loading correctly ([699f041](https://github.com/SupportClass/lfg-nucleus/commit/699f041))
+
+
+### Code Refactoring
+
+* port to NodeCG v0.8 ([77d31b8](https://github.com/SupportClass/lfg-nucleus/commit/77d31b8))
+
+
+### Features
+
+* **streamtip:** update streamtip dep ([71a7426](https://github.com/SupportClass/lfg-nucleus/commit/71a7426))
+
+
+### BREAKING CHANGES
+
+* no longer supports NodeCG v0.7
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/SupportClass/lfg-nucleus/compare/v1.0.2...v1.1.0) (2016-03-01)
 

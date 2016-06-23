@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link rel="import" href="components/paper-button/paper-button.html">
-	<link rel="import" href="components/paper-input/paper-input.html">
+	<link rel="import" href="../components/paper-button/paper-button.html">
+	<link rel="import" href="../components/paper-input/paper-input.html">
 </head>
 <body>
 	<paper-input id="input" label="Minimum Threshold" type="number"></paper-input>
 
 	<script>
-		var input = document.getElementById('input');
+		const input = document.getElementById('input');
 
-		var tipThreshold = nodecg.Replicant('tipThreshold');
-		tipThreshold.on('change', function (oldVal, newVal) {
+		const tipThreshold = nodecg.Replicant('tipThreshold');
+		tipThreshold.on('change', newVal => {
 			input.value = newVal;
 		});
 
-		document.addEventListener('dialog-confirmed', function () {
+		document.addEventListener('dialog-confirmed', () => {
 			tipThreshold.value = input.value;
-		}, false);
+		});
 	</script>
 </body>
 </html>

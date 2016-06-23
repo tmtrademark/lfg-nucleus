@@ -34,7 +34,7 @@ module.exports = function (extensionApi) {
 	server.on('extensionsLoaded', () => {
 		require('./services')(nodecg, module.exports);
 
-		if (Object(nodecg.extensions).hasOwnProperty('lfg-hypetrain')) {
+		if ({}.hasOwnProperty.call(nodecg.extensions, 'lfg-hypetrain')) {
 			train = nodecg.extensions['lfg-hypetrain'];
 		}
 
@@ -111,7 +111,7 @@ function _emitSubscription(subscription, filter) {
 
 	// I'm not sure how train data could be here, but it sometimes is.
 	// We don't want train data to get logged in the history.
-	if (subscription.hasOwnProperty('train')) {
+	if ({}.hasOwnProperty.call(subscription, 'train')) {
 		delete subscription.train;
 	}
 
