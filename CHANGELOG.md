@@ -1,3 +1,13 @@
+<a name="2.0.2"></a>
+## [2.0.2](https://github.com/supportclass/lfg-nucleus/compare/v2.0.1...v2.0.2) (2017-02-02)
+
+
+### Features
+
+* **siphon:** update lfg-siphon integration to 0.4.x ([4e84c87](https://github.com/supportclass/lfg-nucleus/commit/4e84c87))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/SupportClass/lfg-nucleus/compare/v2.0.0...v2.0.1) (2016-06-23)
 
