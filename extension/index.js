@@ -37,24 +37,6 @@ module.exports = function (extensionApi) {
 		if ({}.hasOwnProperty.call(nodecg.extensions, 'lfg-hypetrain')) {
 			train = nodecg.extensions['lfg-hypetrain'];
 		}
-
-		/*
-		 A long time ago I had major memory leak problems.
-		 For whatever reason, garbage collection was never running, and the process would consume memory
-		 until it crashed. To address this, I began running all my production instances of NodeCG with the
-		 `--expose-gc` flag, which allows code to invoke garbage collection with the `global.gc()` method.
-
-		 This might no longer be necessary. Node.js and NodeCG have changed a lot since I first added this hack.
-		 However, this shall remain here until I know for a fact that it is no longer necessary.
-
-		 Lange - 2016-02-27
-		 */
-		if (global.gc) {
-			nodecg.log.info('Running manual garbage collection every 15 minutes');
-			setInterval(() => {
-				global.gc();
-			}, 15 * 60 * 1000);
-		}
 	});
 
 	// Manual notes sent from the dashboard
