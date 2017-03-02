@@ -1,3 +1,18 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/supportclass/lfg-nucleus/compare/v2.0.1...v3.0.0) (2017-03-02)
+
+
+### Features
+
+* **siphon:** update `lfg-siphon` integration to `v0.5.x`
+* add support for Cheers via `lfg-siphon` (#1) ([d86e8cd](https://github.com/supportclass/lfg-nucleus/commit/d86e8cd))
+
+### BREAKING CHANGES
+
+* No longer compatible with `lfg-siphon` < `v0.5.0`
+
+
+
 <a name="2.0.2"></a>
 ## [2.0.2](https://github.com/supportclass/lfg-nucleus/compare/v2.0.1...v2.0.2) (2017-02-02)
 
