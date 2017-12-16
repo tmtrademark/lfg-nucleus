@@ -12,7 +12,8 @@ module.exports = function (nodecg, nucleus) {
 			resub: data.resub,
 			months: data.months,
 			timestamp: data.ts,
-			message: data.message
+			message: data.message,
+			recipient: data.recipient,
 		}));
 	});
 
@@ -22,7 +23,9 @@ module.exports = function (nodecg, nucleus) {
 			amount: data.userstate.bits,
 			message: data.message,
 			channel: data.channel,
-			timestamp: data.ts
+			timestamp: data.ts,
+			recipient: data.recipient,
+			method: data.method
 		}));
 	});
 };
