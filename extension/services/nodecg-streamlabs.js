@@ -7,7 +7,7 @@ module.exports = function (nodecg, nucleus) {
 	streamlabs.on('donation', tip => {
 		nucleus.emitNote(new Tip({
 			name: tip.name,
-			timestamp: new Date.now(),
+			timestamp: Date.now(),
 			amount: parseFloat(tip.amount.amount),
 			comment: tip.message,
 		}));
