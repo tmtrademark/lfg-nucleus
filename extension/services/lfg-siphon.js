@@ -6,6 +6,7 @@ const Cheer = require('../classes/cheer');
 module.exports = function (nodecg, nucleus) {
 	const siphon = nodecg.extensions['lfg-siphon'];
 	siphon.on('subscription', data => {
+		nodecg.log.warn("Sub raw",data);
 		nucleus.emitNote(new Subscription({
 			name: data.username,
 			channel: data.channel,
@@ -25,6 +26,19 @@ module.exports = function (nodecg, nucleus) {
 			message: data.message,
 			channel: data.channel,
 			timestamp: data.ts
+		}));
+	});
+	siphon.on('submysterygift', data => {
+		nodecg.log.warn("Sub Mystery raw", data);
+		nucleus.emitNote(new Subscription({
+			name: data.username,
+			channel: data.channel,
+			resub: data.resub,
+			months: data.months,
+			timestamp: data.ts,
+			message: data.message,
+			recipient: data.recipient,
+			method: data.method
 		}));
 	});
 };
