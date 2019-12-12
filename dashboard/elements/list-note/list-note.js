@@ -72,6 +72,10 @@
 				return this.resub ? `x${this.months}` : 'NEW';
 			}
 
+			if (type === 'gift') {
+				return "GIFT";
+			}
+
 			return type;
 		},
 

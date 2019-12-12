@@ -4,6 +4,7 @@
 <link rel="import" href="../../components/paper-button/paper-button.html">
 <link rel="import" href="../../components/paper-dialog/paper-dialog.html">
 <link rel="import" href="../../components/paper-input/paper-input.html">
+<link rel="import" href="../../components/paper-toggle-button/paper-toggle-button.html">
 <link rel="import" href="../../components/paper-tabs/paper-tab.html">
 <link rel="import" href="../../components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../list-note/list-note.html">
@@ -47,6 +48,10 @@
 				margin-bottom: 8px;
 			}
 
+			#gift, #myst {
+				margin-bottom: 8px;
+			}
+
 			#rightColumn {
 				@apply(--layout-vertical);
 				margin-left: 8px;
@@ -87,6 +92,7 @@
 							 min="0"></paper-input>
 			</div>
 			<paper-input id="comment" label="Comment" type="text"></paper-input>
+			<paper-toggle-button id="gift">Gift Sub? </paper-toggle-button><paper-toggle-button id="myst">Mystery? </paper-toggle-button>
 
 			<paper-button id="send" class="nodecg-info" raised on-tap="send">
 				<span>[[_calcSendButtonText(selectedType)]]</span>

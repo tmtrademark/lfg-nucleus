@@ -1,6 +1,7 @@
 'use strict';
 
 const Subscription = require('../classes/subscription');
+const Gift = require('../classes/gift');
 const Cheer = require('../classes/cheer');
 
 module.exports = function (nodecg, nucleus) {
@@ -14,7 +15,6 @@ module.exports = function (nodecg, nucleus) {
 			months: data.months,
 			timestamp: data.ts,
 			message: data.message,
-			recipient: data.recipient,
 			method: data.method
 		}));
 	});
@@ -30,15 +30,28 @@ module.exports = function (nodecg, nucleus) {
 	});
 	siphon.on('submysterygift', data => {
 		nodecg.log.warn("Sub Mystery raw", data);
-		nucleus.emitNote(new Subscription({
+		nucleus.emitNote(new Gift({
 			name: data.username,
 			channel: data.channel,
-			resub: data.resub,
-			months: data.months,
+			giftSubCount: data.giftSubCount,
+			timestamp: data.ts,
+			message: data.message,
+			recipient: "",
+			method: data.method,
+			mystery: true
+		}));
+	});
+	siphon.on('subgift', data => {
+		nodecg.log.warn("Sub Gift raw", data);
+		nucleus.emitNote(new Gift({
+			name: data.username,
+			channel: data.channel,
+			giftSubCount: 0,
 			timestamp: data.ts,
 			message: data.message,
 			recipient: data.recipient,
-			method: data.method
+			method: data.method,
+			mystery: false
 		}));
 	});
 };

@@ -81,6 +81,8 @@
 			const months = this.$.months.value;
 			const amount = this.$.amount.value;
 			const comment = this.$.comment.value;
+			const gift = this.$.gift.checked;
+			const myst = this.$.myst.checked;
 
 			const noteOpts = {
 				name,
@@ -109,6 +111,17 @@
 				default:
 					console.error('[lfg-nucleus] Invalid manual note type:', type);
 					return;
+			}
+
+			if (gift) {
+				noteOpts.type = "gift";
+				noteOpts.mystery = myst ? true : false;
+				noteOpts.recipient = "";
+				if ( myst ) {
+					noteOpts.giftSubCount = months > 1 ? months : 1;
+				} else {
+					noteOpts.recipient = "ybot";
+				}
 			}
 
 			nodecg.sendMessage('manualNote', noteOpts);

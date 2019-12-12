@@ -3,6 +3,7 @@
 const server = require('../../../lib/server');
 const clone = require('clone');
 const Subscription = require('./classes/subscription');
+const Gift = require('./classes/gift');
 const Cheer = require('./classes/cheer');
 const Tip = require('./classes/tip');
 const EventEmitter = require('events');
@@ -46,6 +47,8 @@ module.exports = function (extensionApi) {
 	nodecg.listenFor('manualNote', noteOpts => {
 		if (noteOpts.type === 'subscription') {
 			emitNote(new Subscription(noteOpts));
+		} else if (noteOpts.type === 'gift') {
+			emitNote(new Gift(noteOpts));
 		} else if (noteOpts.type === 'cheer') {
 			emitNote(new Cheer(noteOpts));
 		} else if (noteOpts.type === 'tip') {
@@ -178,6 +181,8 @@ function emitNote(note, filter) {
 	}
 
 	if (note.type === 'subscription') {
+		_emitSubscription(note, filter);
+	} else if (note.type === 'gift') {
 		_emitSubscription(note, filter);
 	} else if (note.type === 'cheer') {
 		_emitCheer(note, filter);
