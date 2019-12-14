@@ -8,6 +8,7 @@ module.exports = function (nodecg, nucleus) {
 	const siphon = nodecg.extensions['lfg-siphon'];
 	siphon.on('subscription', data => {
 		nodecg.log.warn("Sub raw",data);
+		months:
 		nucleus.emitNote(new Subscription({
 			name: data.username,
 			channel: data.channel,
@@ -15,10 +16,10 @@ module.exports = function (nodecg, nucleus) {
 			months: data.months,
 			timestamp: data.ts,
 			message: data.message,
-			method: data.method
+			method: data.method,
+			recipient: data.recipient
 		}));
 	});
-
 	siphon.on('cheer', data => {
 		nucleus.emitNote(new Cheer({
 			name: data.userstate['display-name'],
@@ -53,5 +54,49 @@ module.exports = function (nodecg, nucleus) {
 			method: data.method,
 			mystery: false
 		}));
+	});
+	siphon.on( 'chat', chat => {
+		if ( ! ( "ybot_" === chat.channel ) ) {
+			return;
+		}
+		const parts = chat.message.split(' ', 2);
+		const cmd = parts[0];
+		const arg = parts.length > 1 ? parts[1] : null;
+		switch( cmd ) {
+			case '!tgs':
+				nucleus.emitNote(new Gift({
+					name: "ybot_",
+					channel: "teawrex",
+					giftSubCount: 2,
+					timestamp: Date.now(),
+					message: "",
+					recipient: "",
+					method: "",
+					mystery: true
+				}));
+				nucleus.emitNote(new Subscription({
+					name: "ybot_",
+					channel: "teawrex",
+					giftSubCount: 2,
+					timestamp: Date.now(),
+					message: "",
+					recipient: "r1",
+					method: "",
+					mystery: false
+				}));
+				nucleus.emitNote(new Subscription({
+					name: "ybot_",
+					channel: "teawrex",
+					giftSubCount: 2,
+					timestamp: Date.now(),
+					message: "",
+					recipient: "r2",
+					method: "",
+					mystery: false
+				}));
+				break;
+			default:
+			//
+		}
 	});
 };

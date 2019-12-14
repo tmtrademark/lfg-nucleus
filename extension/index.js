@@ -18,6 +18,7 @@ let history;
 let flagged;
 let tipThreshold;
 let cheerThreshold;
+let lastSub;
 
 module.exports = function (extensionApi) {
 	nodecg = extensionApi;
@@ -98,6 +99,17 @@ function _emitSubscription(subscription, filter) {
 	if (typeof filter === 'undefined') {
 		filter = true;
 	}
+	// check for username, if equal means that we're in a  gift sub loop
+	if (
+		'undefined' !== typeof(lastSub) &&
+		'undefined' !== typeof(subscription.recipient) &&
+		lastSub.name === subscription.name &&
+		subscription.recipient.length > 0 &&
+		( subscription.timestamp - lastSub.timestamp ) < 5000
+	) {
+		nodecg.log.warn("Sub Username match, recipient set, skipping gift sub extra info");
+		return;
+	}
 
 	// I'm not sure how train data could be here, but it sometimes is.
 	// We don't want train data to get logged in the history.
@@ -132,7 +144,7 @@ function _emitSubscription(subscription, filter) {
 	if (train) {
 		subscription.train = train.addPassenger();
 	}
-
+	lastSub = subscription;
 	nodecg.sendMessage('subscription', subscription);
 	emitter.emit('subscription', subscription);
 }

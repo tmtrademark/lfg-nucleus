@@ -12,6 +12,7 @@ module.exports = class Subscription extends Note {
 		this.profileUrl = `https://twitch.tv/${options.name}`;
 		this.comment = options.message ? options.message.trim() : '';
 		this.method = options.method || "";
+		this.recipient = options.recipient || "";
 		this.mystery = Boolean(options.mystery);
 	}
 };

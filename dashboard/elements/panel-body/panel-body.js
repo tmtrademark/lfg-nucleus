@@ -117,6 +117,7 @@
 				noteOpts.type = "gift";
 				noteOpts.mystery = myst ? true : false;
 				noteOpts.recipient = "";
+				noteOpts.timestamp = Date.now();
 				if ( myst ) {
 					noteOpts.giftSubCount = months > 1 ? months : 1;
 				} else {
