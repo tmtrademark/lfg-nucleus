@@ -5,7 +5,8 @@ const integrations = {
 	'lfg-siphon': '~0.5.0',
 	'lfg-streamtip': '^1.0.0',
 	'lfg-sublistener': '^3.0.0',
-	'nodecg-streamlabs': '0.1.1'
+	'nodecg-streamlabs': '0.1.1',
+	'nodecg-streamelements': '0.1.0'
 };
 
 module.exports = function (nodecg, nucleus) {
